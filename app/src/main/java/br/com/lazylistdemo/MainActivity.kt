@@ -14,34 +14,26 @@ import androidx.compose.ui.tooling.preview.Preview
 import br.com.lazylistdemo.ui.theme.LazyListDemoTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             LazyListDemoTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun MainScreen() {
+
 }
 
-@Preview(showBackground = true)
+@Preview(showSystemUi = true)
 @Composable
-fun GreetingPreview() {
+fun MainScreenPreview() {
     LazyListDemoTheme {
-        Greeting("Android")
     }
 }
